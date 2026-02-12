@@ -4,28 +4,58 @@ import { useState, useEffect } from 'react';
 import TitleSlide from './slides/TitleSlide';
 import IntroSlide from './slides/IntroSlide';
 import Chapter1Slide from './slides/Chapter1Slide';
+import TimeSpaceSlide from './slides/TimeSpaceSlide';
+import RelativitySlide from './slides/RelativitySlide';
+import QuantumSlide from './slides/QuantumSlide';
+import EntropyIntroSlide from './slides/EntropyIntroSlide';
+import StringTheorySlide from './slides/StringTheorySlide';
 import Chapter2Slide from './slides/Chapter2Slide';
+import BigBangSlide from './slides/BigBangSlide';
 import MultiverseSlide from './slides/MultiverseSlide';
+import MultiverseCodeSlide from './slides/MultiverseCodeSlide';
+import StorageSlide from './slides/StorageSlide';
 import Chapter3Slide from './slides/Chapter3Slide';
+import MassSlide from './slides/MassSlide';
 import GravitySlide from './slides/GravitySlide';
+import AttractionSlide from './slides/AttractionSlide';
+import BlackHoleSlide from './slides/BlackHoleSlide';
 import LightSpeedSlide from './slides/LightSpeedSlide';
 import Chapter4Slide from './slides/Chapter4Slide';
+import ConsciousnessSlide from './slides/ConsciousnessSlide';
+import ConsciousnessDetailSlide from './slides/ConsciousnessDetailSlide';
 import EntropySlide from './slides/EntropySlide';
+import MainProcessSlide from './slides/MainProcessSlide';
 import PullRequestSlide from './slides/PullRequestSlide';
+import LinterSlide from './slides/LinterSlide';
 import FinalSlide from './slides/FinalSlide';
 
 const slides = [
   TitleSlide,
   IntroSlide,
   Chapter1Slide,
+  TimeSpaceSlide,
+  RelativitySlide,
+  QuantumSlide,
+  EntropyIntroSlide,
+  StringTheorySlide,
   Chapter2Slide,
+  BigBangSlide,
   MultiverseSlide,
+  MultiverseCodeSlide,
+  StorageSlide,
   Chapter3Slide,
+  MassSlide,
   GravitySlide,
+  AttractionSlide,
+  BlackHoleSlide,
   LightSpeedSlide,
   Chapter4Slide,
+  ConsciousnessSlide,
+  ConsciousnessDetailSlide,
   EntropySlide,
+  MainProcessSlide,
   PullRequestSlide,
+  LinterSlide,
   FinalSlide,
 ];
 
@@ -36,6 +66,7 @@ export default function SlidePresentation() {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowRight' || e.key === ' ') {
+        e.preventDefault();
         if (currentSlide < slides.length - 1) {
           setDirection('forward');
           setCurrentSlide(prev => prev + 1);
@@ -53,6 +84,7 @@ export default function SlidePresentation() {
   }, [currentSlide]);
 
   const CurrentSlideComponent = slides[currentSlide];
+  const progress = ((currentSlide + 1) / slides.length) * 100;
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black">
@@ -67,24 +99,15 @@ export default function SlidePresentation() {
         <CurrentSlideComponent />
       </div>
 
-      <div className="fixed bottom-8 right-8 flex items-center gap-4 text-gray-400 text-sm font-mono z-50">
-        <span>{currentSlide + 1} / {slides.length}</span>
-        <div className="flex gap-2">
-          {slides.map((_, index) => (
-            <div
-              key={index}
-              className={`w-2 h-2 rounded-full transition-all ${
-                index === currentSlide
-                  ? 'bg-cyan-400 w-8'
-                  : 'bg-gray-600'
-              }`}
-            />
-          ))}
-        </div>
+      <div className="fixed top-0 left-0 right-0 h-px bg-gray-800 z-50">
+        <div
+          className="h-full bg-gray-500 transition-all duration-500"
+          style={{ width: `${progress}%` }}
+        />
       </div>
 
-      <div className="fixed bottom-8 left-8 text-gray-500 text-xs font-mono z-50">
-        ← → キー or スペースキーで操作
+      <div className="fixed bottom-6 right-8 text-gray-600 text-xs font-mono z-50">
+        {currentSlide + 1} / {slides.length}
       </div>
     </div>
   );
