@@ -7,24 +7,24 @@ export default function TitleSlide() {
         <div className="stars3"></div>
       </div>
 
-      <div className="relative z-10 text-center space-y-8 px-8 animate-fade-in">
-        <div className="inline-block px-6 py-2 border border-cyan-500 rounded-full text-cyan-400 text-sm font-mono mb-4 animate-pulse-slow">
+      <div className="relative z-10 text-center space-y-6 px-8 animate-fade-in">
+        <div className="inline-block px-6 py-2 border border-cyan-500 rounded text-cyan-400 text-sm font-mono mb-2 animate-pulse-slow">
           $ universe --version
         </div>
 
-        <h1 className="text-7xl font-bold text-white mb-4 animate-glow">
+        <h1 className="text-6xl font-bold text-white mb-3 animate-glow">
           Universe OS
         </h1>
 
-        <div className="text-2xl text-cyan-400 font-mono mb-8">
+        <div className="text-xl text-cyan-400 font-mono mb-4">
           〜138億年目のプロダクション環境デプロイガイド〜
         </div>
 
-        <div className="text-gray-400 text-lg max-w-2xl mx-auto">
+        <div className="text-gray-400 text-base max-w-2xl mx-auto">
           エンジニアの視点で宇宙を読み解く
         </div>
 
-        <div className="mt-12 font-mono text-green-400 text-sm animate-blink">
+        <div className="mt-8 font-mono text-green-400 text-sm animate-blink">
           <span className="mr-2">▶</span>
           Press SPACE or → to start...
         </div>
