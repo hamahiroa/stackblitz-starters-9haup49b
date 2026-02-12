@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import TitleSlide from './slides/TitleSlide';
+import TOCSlide from './slides/TOCSlide';
 import IntroSlide from './slides/IntroSlide';
 import Chapter1Slide from './slides/Chapter1Slide';
 import RelativitySlide from './slides/RelativitySlide';
@@ -27,34 +28,41 @@ import MainProcessSlide from './slides/MainProcessSlide';
 import PullRequestSlide from './slides/PullRequestSlide';
 import LinterSlide from './slides/LinterSlide';
 import FinalSlide from './slides/FinalSlide';
+import SlideTOCIndicator from './SlideTOCIndicator';
 
-const slides = [
-  TitleSlide,
-  IntroSlide,
-  Chapter1Slide,
-  RelativitySlide,
-  QuantumSlide,
-  EntropyIntroSlide,
-  StringTheorySlide,
-  Chapter2Slide,
-  BigBangSlide,
-  MultiverseSlide,
-  MultiverseCodeSlide,
-  StorageSlide,
-  Chapter3Slide,
-  MassSlide,
-  GravitySlide,
-  AttractionSlide,
-  BlackHoleSlide,
-  LightSpeedSlide,
-  Chapter4Slide,
-  ConsciousnessSlide,
-  ConsciousnessDetailSlide,
-  EntropySlide,
-  MainProcessSlide,
-  PullRequestSlide,
-  LinterSlide,
-  FinalSlide,
+interface SlideEntry {
+  component: React.ComponentType;
+  section: number | null;
+}
+
+const slides: SlideEntry[] = [
+  { component: TitleSlide, section: null },
+  { component: TOCSlide, section: null },
+  { component: IntroSlide, section: 0 },
+  { component: Chapter1Slide, section: 1 },
+  { component: RelativitySlide, section: 1 },
+  { component: QuantumSlide, section: 1 },
+  { component: EntropyIntroSlide, section: 1 },
+  { component: StringTheorySlide, section: 1 },
+  { component: Chapter2Slide, section: 2 },
+  { component: BigBangSlide, section: 2 },
+  { component: MultiverseSlide, section: 2 },
+  { component: MultiverseCodeSlide, section: 2 },
+  { component: StorageSlide, section: 2 },
+  { component: Chapter3Slide, section: 3 },
+  { component: MassSlide, section: 3 },
+  { component: GravitySlide, section: 3 },
+  { component: AttractionSlide, section: 3 },
+  { component: BlackHoleSlide, section: 3 },
+  { component: LightSpeedSlide, section: 3 },
+  { component: Chapter4Slide, section: 4 },
+  { component: ConsciousnessSlide, section: 4 },
+  { component: ConsciousnessDetailSlide, section: 4 },
+  { component: EntropySlide, section: 4 },
+  { component: MainProcessSlide, section: 4 },
+  { component: PullRequestSlide, section: 4 },
+  { component: LinterSlide, section: 4 },
+  { component: FinalSlide, section: 4 },
 ];
 
 export default function SlidePresentation() {
@@ -81,7 +89,9 @@ export default function SlidePresentation() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [currentSlide]);
 
-  const CurrentSlideComponent = slides[currentSlide];
+  const current = slides[currentSlide];
+  const CurrentSlideComponent = current.component;
+  const activeSection = current.section;
   const progress = ((currentSlide + 1) / slides.length) * 100;
 
   return (
@@ -96,6 +106,10 @@ export default function SlidePresentation() {
       >
         <CurrentSlideComponent />
       </div>
+
+      {activeSection !== null && (
+        <SlideTOCIndicator activeSection={activeSection} />
+      )}
 
       <div className="fixed top-0 left-0 right-0 h-px bg-gray-800 z-50">
         <div
