@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import TitleSlide from './slides/TitleSlide';
 import IntroSlide from './slides/IntroSlide';
 import Chapter1Slide from './slides/Chapter1Slide';
-import TimeSpaceSlide from './slides/TimeSpaceSlide';
 import RelativitySlide from './slides/RelativitySlide';
 import QuantumSlide from './slides/QuantumSlide';
 import EntropyIntroSlide from './slides/EntropyIntroSlide';
@@ -33,7 +32,6 @@ const slides = [
   TitleSlide,
   IntroSlide,
   Chapter1Slide,
-  TimeSpaceSlide,
   RelativitySlide,
   QuantumSlide,
   EntropyIntroSlide,
