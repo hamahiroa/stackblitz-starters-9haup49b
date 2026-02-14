@@ -34,9 +34,17 @@ export default function BigBangSlide() {
               </div>
             </div>
           </div>
+
+          <div className="mt-5 rounded-lg overflow-hidden border border-gray-800 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <img
+              src="/image copy copy.png"
+              alt="Big Bang explosion"
+              className="w-full h-40 object-cover"
+            />
+          </div>
         </div>
 
-        <div className="flex-shrink-0 w-[420px] animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+        <div className="flex-shrink-0 w-[420px] animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
           <div className="bg-gray-950 border border-gray-800 rounded-lg overflow-hidden shadow-2xl">
             <div className="flex items-center gap-2 px-4 py-2.5 bg-gray-900/80 border-b border-gray-800">
               <div className="flex gap-1.5">
