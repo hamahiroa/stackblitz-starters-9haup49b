@@ -1,75 +1,57 @@
 export default function MonkeyThoughtSlide() {
   return (
-    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-900 to-black p-8">
-      <div className="max-w-6xl w-full">
-        <div className="mb-8 animate-fade-in-up">
-          <h2 className="text-4xl font-bold text-white mb-2">猿とマシンの思考実験</h2>
-          <div className="h-1 w-32 bg-gradient-to-r from-cyan-500 to-transparent"></div>
+    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-900 to-black p-8 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-5">
+        <div className="stars"></div>
+      </div>
+
+      <div className="relative z-10 max-w-5xl w-full flex gap-12 items-center">
+        <div className="flex-shrink-0 animate-fade-in">
+          <div className="relative group">
+            <div className="absolute -inset-2 bg-gray-500/5 rounded-lg blur-xl group-hover:bg-gray-500/10 transition-all duration-700"></div>
+            <img
+              src="/image.png"
+              alt="Monkey typing on a typewriter"
+              className="relative w-56 rounded-lg shadow-2xl shadow-black/50 border border-gray-800 grayscale"
+            />
+          </div>
+          <div className="text-center mt-3 text-gray-600 font-mono text-xs">Infinite Monkey Theorem</div>
         </div>
 
-        <div className="grid grid-cols-2 gap-8 mb-8">
-          <div className="bg-gray-900/60 border-2 border-red-900/50 rounded-lg p-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-4xl">🐵</span>
-              <div>
-                <h3 className="text-xl font-bold text-red-400">従来の猿</h3>
-                <span className="text-xs text-gray-500 font-mono">タイプライター</span>
-              </div>
-            </div>
-
-            <div className="space-y-3 text-gray-300 text-sm leading-relaxed">
-              <div className="bg-black/40 rounded p-3 font-mono text-xs text-gray-500 border border-gray-800">
-                asdkjf;lkajsdf;lkjas;dlfkjas;ldkfj...
-              </div>
-
-              <div className="pl-4 border-l-2 border-red-700/50">
-                <div className="text-gray-400 mb-2">ランダムに文字を打っても<br/>シェイクスピアは書けない</div>
-                <div className="text-gray-500 text-xs">
-                  <span className="text-red-400">✗</span> 生データの総当たり<br/>
-                  <span className="text-red-400">✗</span> ただのノイズ
-                </div>
-              </div>
-            </div>
+        <div className="flex-1 min-w-0">
+          <div className="mb-2 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+            <span className="text-gray-500 font-mono text-xs tracking-widest">THOUGHT EXPERIMENT</span>
           </div>
 
-          <div className="bg-gray-900/60 border-2 border-cyan-900/50 rounded-lg p-6 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-4xl">🐵</span>
-              <div>
-                <h3 className="text-xl font-bold text-cyan-400">デジタル物理学の猿</h3>
-                <span className="text-xs text-gray-500 font-mono">コンピュータ</span>
+          <h2 className="text-3xl font-bold text-white mb-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            猿とマシンの思考実験
+          </h2>
+
+          <div className="space-y-4">
+            <div className="bg-gray-900/60 border border-gray-800 rounded-lg p-4 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <div className="text-gray-500 font-mono text-xs mb-2">従来の猿 / タイプライター</div>
+              <div className="text-gray-300 text-sm leading-relaxed mb-2">
+                ランダムに文字を打ってもシェイクスピアは書けない
+              </div>
+              <div className="font-mono text-xs text-gray-600 bg-black/30 rounded px-3 py-1.5">
+                asdkjf;lkajsdf;lkjas;dlfkj... <span className="text-gray-700">{'// '}ただのノイズ</span>
               </div>
             </div>
 
-            <div className="space-y-3 text-gray-300 text-sm leading-relaxed">
-              <div className="bg-black/40 rounded p-3 font-mono text-xs border border-cyan-900/50">
-                <span className="text-cyan-400">01001101</span> <span className="text-gray-600">{'//'} 物理法則コード</span>
+            <div className="bg-gray-900/60 border border-gray-800 rounded-lg p-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <div className="text-gray-500 font-mono text-xs mb-2">デジタル物理学の猿 / コンピュータ</div>
+              <div className="text-gray-300 text-sm leading-relaxed mb-2">
+                ランダムなビットでも「短いコード（物理法則）」が生成され、システムが宇宙をレンダリング開始
               </div>
-
-              <div className="pl-4 border-l-2 border-cyan-700/50">
-                <div className="text-gray-400 mb-2">たまたま「短いコード（物理法則）」が生成される</div>
-                <div className="text-xs space-y-1">
-                  <div className="text-cyan-400">→ システムが勝手に実行</div>
-                  <div className="text-cyan-400">→ 宇宙をレンダリング開始</div>
-                  <div className="text-green-400 flex items-center gap-1 mt-2">
-                    <span>✓</span> 複雑さの創発
-                  </div>
-                </div>
+              <div className="font-mono text-xs bg-black/30 rounded px-3 py-1.5">
+                <span className="text-gray-400">01001101</span> <span className="text-gray-700">{'// '}物理法則 → 実行 → 創発</span>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div className="bg-gradient-to-r from-gray-900/80 to-gray-900/40 border border-gray-700 rounded-lg p-6 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-          <div className="flex items-start gap-4">
-            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-cyan-500/10 flex items-center justify-center border border-cyan-500/30">
-              <span className="text-cyan-400 text-xl">💡</span>
-            </div>
-            <div>
-              <div className="text-gray-500 text-xs font-mono mb-2 tracking-wider">CONCLUSION</div>
-              <div className="text-xl text-white leading-relaxed">
-                「宇宙はランダムに星を作ったのではない。<br/>
-                <span className="text-cyan-400 font-bold">プログラムを実行して</span>今の複雑さを生み出したのだ。」
+            <div className="bg-gray-900/60 border border-gray-800 rounded-lg p-4 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+              <div className="text-gray-500 font-mono text-xs mb-2">CONCLUSION</div>
+              <div className="text-white text-sm leading-relaxed">
+                「宇宙はランダムに星を作ったのではない。<span className="text-gray-400 font-semibold">プログラムを実行して</span>今の複雑さを生み出したのだ。」
               </div>
             </div>
           </div>
