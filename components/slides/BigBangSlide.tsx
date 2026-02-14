@@ -39,7 +39,7 @@ export default function BigBangSlide() {
             <img
               src="/image copy copy.png"
               alt="Big Bang explosion"
-              className="w-full h-40 object-cover"
+              className="w-full h-56 object-cover"
             />
           </div>
         </div>
