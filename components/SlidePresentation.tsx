@@ -5,6 +5,7 @@ import TitleSlide from './slides/TitleSlide';
 import TOCSlide from './slides/TOCSlide';
 import IntroSlide from './slides/IntroSlide';
 import BookSlide from './slides/BookSlide';
+import MonkeyThoughtSlide from './slides/MonkeyThoughtSlide';
 import Chapter1Slide from './slides/Chapter1Slide';
 import RelativitySlide from './slides/RelativitySlide';
 import QuantumSlide from './slides/QuantumSlide';
@@ -41,6 +42,7 @@ const slides: SlideEntry[] = [
   { component: TOCSlide, section: null },
   { component: IntroSlide, section: 0 },
   { component: BookSlide, section: 0 },
+  { component: MonkeyThoughtSlide, section: 0 },
   { component: Chapter1Slide, section: 1 },
   { component: RelativitySlide, section: 1 },
   { component: QuantumSlide, section: 1 },
