@@ -20,7 +20,7 @@ export default function DarkEnergySlide() {
               <img
                 src="/image copy copy copy copy.png"
                 alt="Universe energy composition pie chart"
-                className="w-[380px] object-contain"
+                className="w-[480px] object-contain"
               />
             </div>
           </div>
