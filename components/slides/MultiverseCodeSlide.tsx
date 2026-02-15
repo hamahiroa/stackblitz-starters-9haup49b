@@ -35,9 +35,12 @@ export default function MultiverseCodeSlide() {
 
         <div className="flex-shrink-0 w-[360px] animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
           <div className="rounded-lg overflow-hidden border border-gray-800 shadow-2xl">
-            <img
-              src="/image copy copy copy.png"
-              alt="Multiverse planets"
+            <video
+              src="/video.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
               className="w-full h-[420px] object-cover"
             />
           </div>
