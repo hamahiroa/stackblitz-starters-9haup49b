@@ -15,6 +15,7 @@ import Chapter2Slide from './slides/Chapter2Slide';
 import BigBangSlide from './slides/BigBangSlide';
 import MultiverseSlide from './slides/MultiverseSlide';
 import MultiverseCodeSlide from './slides/MultiverseCodeSlide';
+import DarkEnergySlide from './slides/DarkEnergySlide';
 import StorageSlide from './slides/StorageSlide';
 import Chapter3Slide from './slides/Chapter3Slide';
 import MassSlide from './slides/MassSlide';
@@ -52,6 +53,7 @@ const slides: SlideEntry[] = [
   { component: MultiverseSlide, section: 2 },
   { component: BigBangSlide, section: 2 },
   { component: MultiverseCodeSlide, section: 2 },
+  { component: DarkEnergySlide, section: 2 },
   { component: StorageSlide, section: 2 },
   { component: Chapter3Slide, section: 3 },
   { component: MassSlide, section: 3 },

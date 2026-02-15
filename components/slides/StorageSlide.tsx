@@ -9,8 +9,8 @@ export default function StorageSlide() {
         <div className="text-gray-500 font-mono text-xs mb-4 tracking-widest">02 / STORAGE</div>
         <h3 className="text-3xl font-bold text-white mb-8">ストレージ仕様</h3>
 
-        <div className="flex gap-8 mb-6">
-          <div className="flex-1 space-y-4">
+        <div className="flex gap-10 items-start">
+          <div className="flex-1 space-y-5">
             <div className="bg-gray-900/60 rounded-lg p-5 border border-gray-800 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               <div className="text-gray-500 font-mono text-xs mb-2">ホログラフィー原理</div>
               <div className="text-white text-sm font-semibold mb-1">ヘーラルト・トホーフト（1993年）</div>
@@ -36,28 +36,14 @@ export default function StorageSlide() {
 
           <div className="flex-shrink-0 flex flex-col items-center justify-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <div className="relative group">
-              <div className="absolute -inset-3 bg-gray-500/5 rounded-lg blur-xl group-hover:bg-gray-500/10 transition-all duration-700"></div>
+              <div className="absolute -inset-4 bg-gray-500/5 rounded-xl blur-xl group-hover:bg-gray-500/10 transition-all duration-700"></div>
               <img
                 src="/image copy.png"
                 alt="Holographic Principle"
-                className="relative w-52 rounded-lg shadow-2xl shadow-black/50 border border-gray-800"
+                className="relative w-80 rounded-lg shadow-2xl shadow-black/50 border border-gray-800"
               />
             </div>
-            <div className="text-center mt-3 text-gray-600 font-mono text-xs">Holographic Principle</div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-2 gap-4">
-          <div className="bg-gray-900/60 rounded-lg p-5 border border-gray-800 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-            <div className="text-gray-500 font-mono text-xs mb-2">ダークエネルギー</div>
-            <div className="text-gray-300 text-sm">動的なメモリ増設</div>
-            <div className="text-gray-600 font-mono text-xs mt-1">Auto Scaling</div>
-          </div>
-
-          <div className="bg-gray-900/60 rounded-lg p-5 border border-gray-800 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-            <div className="text-gray-500 font-mono text-xs mb-2">ダークマター</div>
-            <div className="text-gray-300 text-sm">画面には映らない裏方データ</div>
-            <div className="text-gray-600 font-mono text-xs mt-1">Index</div>
+            <div className="text-center mt-4 text-gray-600 font-mono text-xs">Holographic Principle</div>
           </div>
         </div>
       </div>
